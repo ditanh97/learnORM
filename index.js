@@ -1,4 +1,5 @@
 'use strict'
+require ('dotenv/config');
 
 const express  = require ('express');
 const bodyParser = require('body-parser');
@@ -76,7 +77,7 @@ app.delete('/delete/:id', (req,res) => {
 app.use('/', router);
 
 
-const PORT = process.env.DB_PORT || 5000;
+const PORT = process.env.DB_PORT || 3001;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
 
